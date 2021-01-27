@@ -20,7 +20,7 @@
 class Node {
   constructor(value) {
     this.value = value
-    this.ne
+    this.next = null
   }
 }
 
@@ -34,7 +34,16 @@ class MySinglyLinkedList {
 
     this.length = 1
   }
+  append(value) {
+    let currentNode = new Node(value)
+    this.tail.next = currentNode
+    this.tail = currentNode
+    this.length++
 
+  }
 }
 
 let mySinglyLinkedList = new MySinglyLinkedList
+mySinglyLinkedList.append(2)
+mySinglyLinkedList.append(3)
+console.log(mySinglyLinkedList)
