@@ -32,6 +32,7 @@ class Stack {
   }
   const nodeBeforeTop = this.getOneBeforeTop()
   const nodeToRemove = nodeBeforeTop.next
+  // might be optional
   delete nodeBeforeTop.next
   this.top = nodeBeforeTop
   this.length--
